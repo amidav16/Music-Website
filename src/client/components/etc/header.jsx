@@ -36,7 +36,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar sx={{ backgroundColor: "black" }} osition="static">
+    //Responsive header that will change depending on screen size. Will fit on mobiles
+    <AppBar sx={{ bgcolor: "black" }} osition="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>

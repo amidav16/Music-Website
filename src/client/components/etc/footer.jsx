@@ -5,7 +5,6 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -22,17 +21,20 @@ const logoStyle = {
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" mt={1}>
+    <Typography variant="body2" mt={1} sx={{ color: "white" }}>
       {"Copyright © "}
-      <Link href="#">Sitemark&nbsp;</Link>
+      <Link href="#" sx={{ textDecoration: "none", color: "yellow" }}>
+        Lyd Konsept&nbsp;
+      </Link>
       {new Date().getFullYear()}
     </Typography>
   );
 }
 
 export default function Footer() {
+  //Footer with all purpose links, they will not lead to anywhere for now except the social media ones.
   return (
-    <Box sx={{ bgcolor: "grey" }}>
+    <Box sx={{ bgcolor: "black" }}>
       <Container
         sx={{
           display: "flex",
@@ -196,7 +198,7 @@ export default function Footer() {
             pt: { xs: 4, sm: 8 },
             width: "100%",
             borderTop: "1px solid",
-            borderColor: "divider",
+            borderColor: "white",
           }}
         >
           <div>
@@ -214,20 +216,12 @@ export default function Footer() {
             </Link>
             <Copyright />
           </div>
-          <Stack
-            direction="row"
-            justifyContent="left"
-            spacing={1}
-            useFlexGap
-            sx={{
-              color: "text.secondary",
-            }}
-          >
+          <Stack direction="row" justifyContent="left" spacing={1} useFlexGap>
             <IconButton
               color="inherit"
               href="https://github.com/"
               aria-label="GitHub"
-              sx={{ alignSelf: "center" }}
+              sx={{ alignSelf: "center", color: "white" }}
             >
               <GitHubIcon />
             </IconButton>
@@ -235,7 +229,7 @@ export default function Footer() {
               color="inherit"
               href="https://twitter.com/"
               aria-label="X"
-              sx={{ alignSelf: "center" }}
+              sx={{ alignSelf: "center", color: "white" }}
             >
               <TwitterIcon />
             </IconButton>
@@ -243,7 +237,7 @@ export default function Footer() {
               color="inherit"
               href="https://www.linkedin.com"
               aria-label="LinkedIn"
-              sx={{ alignSelf: "center" }}
+              sx={{ alignSelf: "center", color: "white" }}
             >
               <LinkedInIcon />
             </IconButton>

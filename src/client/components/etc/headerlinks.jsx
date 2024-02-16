@@ -3,6 +3,7 @@ import { MenuItem } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 const HeaderLinks = () => {
+  //Since we utilize this twice its nice to save some coding space
   return (
     <>
       <MenuItem component={NavLink} to="/home">

@@ -9,6 +9,7 @@ import items from "./highlightitems";
 import YGraphicTriangle from "../../../assets/YGraphicTriangle.svg";
 
 export default function Highlights() {
+  // Filler information to look appealing and professional for customers
   return (
     <Box
       id="highlights"
@@ -16,11 +17,12 @@ export default function Highlights() {
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
         color: "white",
-        bgcolor: "#06090a",
+        bgcolor: "var(--lk-grey)",
       }}
     >
       <Container
         sx={{
+          overflow: "hidden",
           position: "relative",
           display: "flex",
           flexDirection: "column",
@@ -36,8 +38,9 @@ export default function Highlights() {
             top: 0,
             width: "40%",
             height: "450px",
-            right: -100,
+            right: 0,
             zIndex: 1,
+            overflow: "hidden",
           }}
         />
 
@@ -45,14 +48,16 @@ export default function Highlights() {
           src={YGraphicTriangle}
           alt="Y Graphic Triangle"
           style={{
+            overflow: "hidden",
             position: "absolute",
             top: 0,
             width: "40%",
             height: "450px",
-            left: -100,
+            left: 0,
             zIndex: 1,
           }}
         />
+
         <Box
           sx={{
             width: { sm: "100%", md: "60%" },

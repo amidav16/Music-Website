@@ -5,6 +5,7 @@ import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRound
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
 
+// We can save some space by throwing this in a different file and make the higlights.jsx more readable
 const items = [
   {
     icon: <SettingsSuggestRoundedIcon />,

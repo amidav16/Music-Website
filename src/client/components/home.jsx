@@ -5,12 +5,12 @@ import Banner from "./etc/banner";
 import Highlights from "./etc/highlights";
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
       <Banner />
       <Highlights />
       <Footer />
-    </div>
+    </>
   );
 };
 

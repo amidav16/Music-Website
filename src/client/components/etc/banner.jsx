@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { Box, Button } from "@mui/material";
 
 const Banner = () => {
+  //A banner utilizing MUI boxes and buttons to center a picture with text
   return (
     <Box>
       <img

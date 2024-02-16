@@ -1,5 +1,4 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -8,58 +7,79 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { toast } from "react-toastify";
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Lyd Konsept
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import LKIconYellow from "../../../assets/LKIconYellow.svg";
+import YGraphicTriangle from "../../../assets/YGraphicTriangle.svg";
+import BGraphicTriangle from "../../../assets/BGraphicTriangle.svg";
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+    //Sends a react toast notifcation in the middle of the screen
+    toast.success("User has successfully been registered in our systems!", {
+      position: "top-center",
+      autoClose: 10000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
     });
   };
 
   return (
+    //Register form with some graphics, we can store the values in a usestate and display the data somewhere
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 15,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign up
+          <img
+            src={YGraphicTriangle}
+            alt="Y Graphic Triangle"
+            style={{
+              position: "absolute",
+              top: -330,
+              width: "25%",
+              height: "800px",
+              right: 0,
+              zIndex: -10,
+            }}
+          />
+
+          <img
+            src={BGraphicTriangle}
+            alt="B Graphic Triangle"
+            style={{
+              position: "absolute",
+              top: -330,
+              width: "25%",
+              height: "800px",
+              left: 0,
+              zIndex: -10,
+            }}
+          />
+          <img
+            src={LKIconYellow}
+            alt="LKICon"
+            style={{ width: 50, marginBottom: 10 }}
+          />
+
+          <Typography component="h1" variant="h4" sx={{ fontWeight: "bold" }}>
+            Invite a user
           </Typography>
           <Box
             component="form"
@@ -68,7 +88,7 @@ export default function SignUp() {
             sx={{ mt: 3 }}
           >
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField
                   autoComplete="given-name"
                   name="firstName"
@@ -79,7 +99,7 @@ export default function SignUp() {
                   autoFocus
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
@@ -93,29 +113,30 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
+                  id="phone"
+                  label="Phone Number"
+                  name="phone"
+                  autoComplete="phone"
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
                 />
               </Grid>
+
               <Grid item xs={12}>
                 <FormControlLabel
+                  sx={{ mt: 2, mb: 1 }}
                   control={
                     <Checkbox value="allowExtraEmails" color="primary" />
                   }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label="I have read and agreed to Lyd Konsepts Terms of service and Privacy Policy."
                 />
               </Grid>
             </Grid>
@@ -123,9 +144,20 @@ export default function SignUp() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{
+                backgroundColor: "var(--lk-yellow)",
+                fontWeight: "bold",
+                color: "black",
+                textShadow: "none",
+                mt: 2,
+                mb: 2,
+                "&:hover": {
+                  backgroundColor: "var(--lk-byellow)",
+                },
+                display: "block",
+              }}
             >
-              Sign Up
+              Invite User
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
@@ -136,7 +168,7 @@ export default function SignUp() {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
+        <Box sx={{ mb: 20 }} />
       </Container>
     </ThemeProvider>
   );
