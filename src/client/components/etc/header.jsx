@@ -8,12 +8,11 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { NavLink } from "react-router-dom";
 
 import LogoImg from "../../../assets/LogoYellow.svg";
+import HeaderLinks from "./headerlinks";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -81,15 +80,7 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem component={NavLink} to="/home">
-                <Typography textAlign="center">Home</Typography>
-              </MenuItem>
-              <MenuItem component={NavLink} to="/register">
-                <Typography textAlign="center">Register</Typography>
-              </MenuItem>
-              <MenuItem component={NavLink}>
-                <Typography textAlign="center">About Us</Typography>
-              </MenuItem>
+              <HeaderLinks />
             </Menu>
           </Box>
           <Box
@@ -111,15 +102,7 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <MenuItem component={NavLink} to="/home">
-              <Typography textAlign="center">Home</Typography>
-            </MenuItem>
-            <MenuItem component={NavLink} to="/register">
-              <Typography textAlign="center">Register</Typography>
-            </MenuItem>
-            <MenuItem component={NavLink}>
-              <Typography textAlign="center">About Us</Typography>
-            </MenuItem>
+            <HeaderLinks />
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

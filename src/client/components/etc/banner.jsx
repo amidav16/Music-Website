@@ -1,7 +1,7 @@
 import React from "react";
 import HomeImg from "../../../assets/homeimg.png";
-import { NavLink } from "react-router-dom";
 
+import { NavLink } from "react-router-dom";
 import { Box, Button } from "@mui/material";
 
 const Banner = () => {
@@ -23,34 +23,37 @@ const Banner = () => {
         sx={{
           position: "absolute",
           top: "25%",
+          textAlign: "center",
           left: "50%",
           transform: "translate(-50%, -50%)",
           color: "white",
-          fontSize: "calc(1.5vw + 20px)",
+          fontSize: "calc(1.5vw + 18px)",
           fontWeight: "bold",
           textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
         }}
       >
-        <span style={{ color: "yellow" }}>A</span> Unique Sound Concept
-        <span style={{ color: "yellow" }}> Visualised</span>
+        <span style={{ color: "var(--lk-yellow)" }}>A</span> Unique Sound
+        Concept
+        <span style={{ color: "var(--lk-yellow)" }}> Visualised</span>
         <div style={{ marginTop: 20 }}>
           <Button
             component={NavLink}
             to="/register"
             variant="contained"
             sx={{
-              backgroundColor: " #fff176",
+              backgroundColor: "var(--lk-yellow)",
               fontWeight: "bold",
               color: "black",
+              textShadow: "none",
               width: "135px",
               "&:hover": {
-                backgroundColor: "#ffeb3b",
+                backgroundColor: "var(--lk-byellow)",
               },
               display: "block",
               margin: "0 auto",
             }}
           >
-            Get Started
+            <span>Get Started</span>
           </Button>
         </div>
       </Box>
