@@ -84,9 +84,8 @@ export default function Highlights() {
               fontFamily: "IBM Plex Mono",
             }}
           >
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer
-            support and precision in every detail.
+            Explore why our product stands out: adaptability, durability, user-friendly design, and innovation. Enjoy reliable
+            customer support and precision in every detail.
           </Typography>
         </Box>
         <Grid container spacing={2.5}>

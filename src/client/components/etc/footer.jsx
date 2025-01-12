@@ -64,11 +64,7 @@ export default function Footer() {
           >
             <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
               <Box sx={{ ml: "-15px" }}>
-                <img
-                  src={LKIconYellow}
-                  style={logoStyle}
-                  alt="logo of sitemark"
-                />
+                <img src={LKIconYellow} style={logoStyle} alt="logo of sitemark" />
               </Box>
               <Typography
                 variant="body2"
@@ -82,12 +78,7 @@ export default function Footer() {
               >
                 Newsletter
               </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                mb={2}
-                sx={{ color: "white" }}
-              >
+              <Typography variant="body2" color="text.secondary" mb={2} sx={{ color: "white" }}>
                 Subscribe to our newsletter for weekly updates and promotions.
               </Typography>
               <Stack direction="row" spacing={1} useFlexGap>
@@ -119,11 +110,7 @@ export default function Footer() {
               gap: 1,
             }}
           >
-            <Typography
-              variant="body2"
-              fontWeight={600}
-              sx={{ color: "white", fontFamily: "IBM Plex Mono", fontSize: 16 }}
-            >
+            <Typography variant="body2" fontWeight={600} sx={{ color: "white", fontFamily: "IBM Plex Mono", fontSize: 16 }}>
               Product
             </Typography>
             <Link href="#" sx={{ textDecoration: "none", color: "white" }}>
@@ -149,11 +136,7 @@ export default function Footer() {
               gap: 1,
             }}
           >
-            <Typography
-              variant="body2"
-              fontWeight={600}
-              sx={{ color: "white", fontFamily: "IBM Plex Mono", fontSize: 16 }}
-            >
+            <Typography variant="body2" fontWeight={600} sx={{ color: "white", fontFamily: "IBM Plex Mono", fontSize: 16 }}>
               Company
             </Typography>
             <Link href="#" sx={{ textDecoration: "none", color: "white" }}>
@@ -173,11 +156,7 @@ export default function Footer() {
               gap: 1,
             }}
           >
-            <Typography
-              variant="body2"
-              fontWeight={600}
-              sx={{ color: "white", fontFamily: "IBM Plex Mono", fontSize: 16 }}
-            >
+            <Typography variant="body2" fontWeight={600} sx={{ color: "white", fontFamily: "IBM Plex Mono", fontSize: 16 }}>
               Legal
             </Typography>
             <Link href="#" sx={{ textDecoration: "none", color: "white" }}>
@@ -205,10 +184,7 @@ export default function Footer() {
             <Link href="#" sx={{ textDecoration: "none", color: "white" }}>
               Privacy Policy
             </Link>
-            <Typography
-              display="inline"
-              sx={{ mx: 0.5, opacity: 0.5, color: "white" }}
-            >
+            <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5, color: "white" }}>
               &nbsp;•&nbsp;
             </Typography>
             <Link href="#" sx={{ textDecoration: "none", color: "white" }}>
@@ -225,12 +201,7 @@ export default function Footer() {
             >
               <GitHubIcon />
             </IconButton>
-            <IconButton
-              color="inherit"
-              href="https://twitter.com/"
-              aria-label="X"
-              sx={{ alignSelf: "center", color: "white" }}
-            >
+            <IconButton color="inherit" href="https://twitter.com/" aria-label="X" sx={{ alignSelf: "center", color: "white" }}>
               <TwitterIcon />
             </IconButton>
             <IconButton
