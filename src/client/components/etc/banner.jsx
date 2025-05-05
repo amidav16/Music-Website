@@ -23,7 +23,8 @@ const Banner = () => {
       <Box
         sx={{
           position: "absolute",
-          top: "25%",
+          marginTop: 15,
+          top: "20%",
           textAlign: "center",
           left: "50%",
           transform: "translate(-50%, -50%)",
@@ -33,8 +34,7 @@ const Banner = () => {
           textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
         }}
       >
-        <span style={{ color: "var(--lk-yellow)" }}>A</span> Unique Sound
-        Concept
+        <span style={{ color: "var(--lk-yellow)" }}>A</span> Unique Sound Concept
         <span style={{ color: "var(--lk-yellow)" }}> Visualised</span>
         <div style={{ marginTop: 20 }}>
           <Button
